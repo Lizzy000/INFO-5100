@@ -1,0 +1,37 @@
+Renter can:
+1. login
+2. search car based on parameters(CarMake, Class, Type, Price, Location
+3. rent a car
+4. share a car
+
+------------------------------------------------------------------------------------------
+Class: Renter
+
+State: Name, Password, LicenseId,
+Behavior：
+--------------------
+Class: CarOwner
+
+State: Name,password, Location, HolderProof,
+Behavior:
+--------------------
+Class: Car
+
+State: CarMake, Class, Type, Price, Location
+Behavior:
+--------------------
+Class: CreditCardDetails
+
+State:
+Behavior:
+--------------------
+Class: RentalService  (GetCarLocation, ReturnCarLocation, StartTime, ReturnTime
+
+State:
+Behavior:
+--------------------
+Class: GoogleMap
+
+State:
+Behavior:
+--------------------
