@@ -2,7 +2,6 @@ Renter can:
 1. login
 2. search car based on parameters(CarMake, Class, Type, Price, Location
 3. rent a car
-4. share a car
 
 ------------------------------------------------------------------------------------------
 Class: Renter
