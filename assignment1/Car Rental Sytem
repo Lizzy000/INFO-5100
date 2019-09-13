@@ -7,19 +7,17 @@ Renter can:
 
 ------------------------------------------------------------------------------------------
 Class: renter
-State: name, password, licenseId,
+State: name
 Behavior：
-loginRentalSystem(name, password){
-                 
+loginRentalSystem(name){
+                 rentalSystem.userLogin(name);
 }
 
 searchCar(carMake, carType, price){
+                  rentalSystem.search();
 }
 
 rentCar(){
-}
-
-getCarLocation(){
 }
 
 returnCar(){
@@ -36,33 +34,38 @@ shareCar(){
 uploadCarInfo(){
 }
 
---------------------
-Class: Car
-State: carMake, carType, price, location, returnLocation
+------------------------------------------------------------
+Class: car
+State: carID                    carMake, carType, price, location, returnLocation
+Behavior:
+isAvailable(carID) {
+//if car is available, return true, else return false
+}
 
-
-Class: creditCard
-State: carNumber, name, expireDate, billingAddress, securityCode
-
---------------------
+-------------------------------------------------------------
 Class: rentalSystem  
 State: startTime, returnTime
 Behavior:
 
-userLogin(){
+userLogin(userName) {
+	List<String> nameList;
+	for(String name:nameList) {
+		if(userName == name)
+       return true;
+}
+    system.out.printIn("username not found");
+    return false;
 }
 
-checkCarAvailability(){
+checkCarAvailability(carID){
+
+    return car.isAvailable
+    
 }
 
-getCar(){
+search(car paramts) {
 }
 
 returnCar(){
 }
---------------------
-Class: GoogleMap
-
-State:
-Behavior:
---------------------
+-----------------------------------------------------------------
