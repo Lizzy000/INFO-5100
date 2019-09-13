@@ -1,33 +1,65 @@
+Design a Car Rental System
+------------------------------------------------------------------------------------------
 Renter can:
 1. login
-2. search car based on parameters(CarMake, Class, Type, Price, Location
+2. search car based on parameters(CarMake, Type, Price, Location
 3. rent a car
 
 ------------------------------------------------------------------------------------------
-Class: Renter
-
-State: Name, Password, LicenseId,
+Class: renter
+State: name, password, licenseId,
 Behavior：
+loginRentalSystem(name, password){
+                 
+}
+
+searchCar(carMake, carType, price){
+}
+
+rentCar(){
+}
+
+getCarLocation(){
+}
+
+returnCar(){
+          rentalSystem.returnCar()
+          }
 --------------------
 Class: CarOwner
-
-State: Name,password, Location, HolderProof,
+State: carLocation, HolderProof,
 Behavior:
+
+shareCar(){
+}
+
+uploadCarInfo(){
+}
+
 --------------------
 Class: Car
+State: carMake, carType, price, location, returnLocation
 
-State: CarMake, Class, Type, Price, Location
-Behavior:
+
+Class: creditCard
+State: carNumber, name, expireDate, billingAddress, securityCode
+
 --------------------
-Class: CreditCardDetails
-
-State:
+Class: rentalSystem  
+State: startTime, returnTime
 Behavior:
---------------------
-Class: RentalService  (GetCarLocation, ReturnCarLocation, StartTime, ReturnTime
 
-State:
-Behavior:
+userLogin(){
+}
+
+checkCarAvailability(){
+}
+
+getCar(){
+}
+
+returnCar(){
+}
 --------------------
 Class: GoogleMap
 
