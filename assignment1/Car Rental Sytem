@@ -6,44 +6,44 @@ Renter can:
 3. rent a car
 
 ------------------------------------------------------------------------------------------
-Class: renter
-State: name
+Class: Renter
+State: name, currentLocation, returnCarLocation
 Behavior：
 loginRentalSystem(name){
-                 rentalSystem.userLogin(name);
+               rentalSystem.userLogin(name);
 }
+
 
 searchCar(carMake, carType, price){
-                  rentalSystem.search();
+               rentalSystem.search();
 }
 
-rentCar(){
+
+rentCar(currentLocation){
+//pass car location to rental system 
 }
 
-returnCar(){
-          rentalSystem.returnCar()
-          }
+returnCar(returnCarLocation){
+}
+
 --------------------
 Class: CarOwner
-State: carLocation, HolderProof,
+State: carLocation, holderProof, license
 Behavior:
-
-shareCar(){
-}
-
-uploadCarInfo(){
+shareCar(carLocation, carMake, carType, price){
+//add a record in available cars database
 }
 
 ------------------------------------------------------------
-Class: car
-State: carID                    carMake, carType, price, location, returnLocation
+Class: Car
+State: carID, carMake, carType, price, location
 Behavior:
 isAvailable(carID) {
 //if car is available, return true, else return false
 }
 
 -------------------------------------------------------------
-Class: rentalSystem  
+Class: RentalSystem  
 State: startTime, returnTime
 Behavior:
 
@@ -63,9 +63,12 @@ checkCarAvailability(carID){
     
 }
 
-search(car paramts) {
+search(carParamts) {
+//list and print all matched car record
 }
 
 returnCar(){
+ArrayList<String> returnCarList;
+ArrayList.add(Renter.returnCarLocation);
 }
 -----------------------------------------------------------------
