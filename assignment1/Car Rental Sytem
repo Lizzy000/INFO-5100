@@ -1,53 +1,62 @@
 Design a Car Rental System
-------------------------------------------------------------------------------------------
+----------------------------------------------------------------
 Renter can:
 1. login
-2. search car based on parameters(CarMake, Type, Price, Location
+2. search car based on parameters(CarMake, Type, Price, Location)
 3. rent a car
 
-------------------------------------------------------------------------------------------
+----------------------------------------------------------------
 Class: Renter
-State: name, currentLocation, returnCarLocation
+State: name, currentLocation, returnCarLocation, license, startDate, returnDate
 Behavior：
 loginRentalSystem(name){
                rentalSystem.userLogin(name);
 }
 
 
-searchCar(carMake, carType, price){
+Behavior:
+searchCar(carMake, carType, price, currentLocation){
+       //pass car keywords to rentalsystem to find qualified cars
+       //pass current location of renter to find the nearest cars
                rentalSystem.search();
 }
 
 
-rentCar(currentLocation){
-//pass car location to rental system 
+Behavior:
+rentCar(carID, startDate, returnDate){
+    //send a request
+    RentalSystem.rentCar(paramts)
 }
 
-returnCar(returnCarLocation){
+Behavior:
+returnCar(carID, returnCarLocation){
 }
 
 --------------------
 Class: CarOwner
-State: carLocation, holderProof, license
+State: name, carLocation, license
+Behavior:
+login(name){
+}
+
 Behavior:
 shareCar(carLocation, carMake, carType, price){
-//add a record in available cars database
+    RentalSystem.shareCar(carLocation, carMake, carType, price)
+//add a record in cars database
 }
 
 ------------------------------------------------------------
 Class: Car
-State: carID, carMake, carType, price, location
-Behavior:
-isAvailable(carID) {
-//if car is available, return true, else return false
-}
+State: carID, carMake, carType, price, location,Boolean availablity
+
+Class: CreditCard
+State: billingAddress, securityCode, nameOnCard, cardNumber, expireDate
+
 
 -------------------------------------------------------------
 Class: RentalSystem  
-State: startTime, returnTime
 Behavior:
-
-userLogin(userName) {
+userLogin(String userName) {
 	List<String> nameList;
 	for(String name:nameList) {
 		if(userName == name)
@@ -57,18 +66,33 @@ userLogin(userName) {
     return false;
 }
 
-checkCarAvailability(carID){
-
-    return car.isAvailable
-    
+Behavior:
+checkCarAvailability(Car car){
+   return car.availability
+   //car.availability is boolean type
 }
 
-search(carParamts) {
-//list and print all matched car record
+Behavior:
+checkCreditCardAvailability(creditCardParamts){
+//check credit card exprie date, and card validity 
 }
 
-returnCar(){
-ArrayList<String> returnCarList;
-ArrayList.add(Renter.returnCarLocation);
+Behavior:
+earch(carParamts) {
+//list and print all matched car records
 }
------------------------------------------------------------------
+
+Behavior:
+rentCar(carID, startDate, returnDate){
+}
+
+Behavior:
+returnCar(carID, returnLocation){
+    RentalSystem.returnCar(carID, returnLocation)
+}
+
+Behavior:
+shareCar(carLocation, carMake, carType, price){
+//post a car record into car database 
+}
+--------------------------------------------------------------
