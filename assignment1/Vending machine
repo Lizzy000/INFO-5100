@@ -1,0 +1,53 @@
+Class User
+State:
+Behavior:
+insertCoin(coinParamts){
+//according to the weight and size of inserted coin to identify coin value, and return the value 
+}
+
+Behavior:
+pressButton(selectedItem){
+//select item in vending machine
+}
+--------------------------------------------
+Class Coin
+State:cent, nickel, dime, quater, halfDollar, dollar
+
+--------------------------------------------
+Class Item
+State: soda, water, candies, chocolate
+--------------------------------------------
+Class VendingMachineService
+State:numberOfCoins
+Behavior:
+acceptedCoin(){
+
+//    if accept cent, then return cent and print 
+    if accept dime, then return
+    if accept 
+    numberOfCoins++
+}
+
+Behavior:
+calculateSum(){
+//calculate the total sum of accepted coins
+    int sum = 0;
+    for(i = 0; i <= numberOfCoins, i++){
+        sum = sum + 
+    }
+}
+
+Behavior:
+checkCoinMatch(){
+    if User user.inserCoin() == Coin coin.
+}
+
+
+Behavior:
+returnCoin(){
+}
+
+Behavior:
+vendOutItem(){
+}
+---------------------------------------------
