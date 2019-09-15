@@ -27,22 +27,22 @@ dropCourse(courseID){
 
 --------------------------------------
 Class RegistrationPlatform
-State:
+State:term
 Behavior:
 Login(studentID){
 }
 
 Behavior:
-selectTerm(){
+selectTerm(term){
 }
 
 Behavior:
-searchClass(courseID){
+searchClass(courseID, term){
 //list the course info
 }
 
 Behavior:
-registerClass(courseID){
+registerClass(courseID, studentID){
 }
 
 Behavior:
@@ -52,7 +52,7 @@ checkCreditHours(studentID){
 }
 
 Behavior:
-dropClass(courseID){
+dropClass(courseID, term){
 //if checkCreditHours is false, warning
 //if checkCreditHours is true, drop the class
 }
