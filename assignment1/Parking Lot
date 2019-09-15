@@ -3,25 +3,49 @@ Class Driver
 Class ParkingLot
 State: maxCapacity
 Behavior:
-checkCapacity(){
-//check parking lot capacity, if full, return true
+checkSpace(){
+//check if parking space is available, if parking lot is full, return false
+    if(parkingLot.spaceAmount == 0) {
+       return false
+    }
+//if there is any space in parking lot, return true
+    if(parkingLot.spaceAmount > 0) {
+       return true
+    }
 }
------------------------------------
-Class car
-State:carID
+
 Behavior:
+checkCardBalance(carID){
+//if car balance > 0, return true
+//else, return false
+}
+
+Behavior
 carIn(){
-   if(check.capacity)
-   carNumber++
+   //if parkingLot.checkSpace > 0 && parkingLot.checkCardBalance == true, raise the fence and let car in
+   //if one car in, parkingLot.spaceAmount++
 }
 
 
 Behavior:
 carOut(){
-carNumber--
+   //if one car out, parkingLot.spaceAmount--
 }
 
+-----------------------------------
+Class car
+State:carID, parkingTime
 
 ------------------------------------
 Class ParkingCard
-State: cardID, balance, 
+State: cardID, balance
+Behavior:
+refillBalance(){
+}
+
+Behavior:
+chargeFee(){
+//use car.parkingTime to calculate charge
+    float charge = car.parkingTime * feePerHour;
+    float balance = balance - charge;
+}
