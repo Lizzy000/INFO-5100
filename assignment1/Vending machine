@@ -2,7 +2,6 @@ Class User
 State:
 Behavior:
 insertCoin(coinParamts){
-//according to the weight and size of inserted coin to identify coin value, and return the value 
 }
 
 Behavior:
@@ -15,39 +14,41 @@ State:cent, nickel, dime, quater, halfDollar, dollar
 
 --------------------------------------------
 Class Item
-State: soda, water, candies, chocolate
+State: soda, chocolate, candies, water, price
 --------------------------------------------
 Class VendingMachineService
 State:numberOfCoins
 Behavior:
 acceptedCoin(){
-
-//    if accept cent, then return cent and print 
-    if accept dime, then return
-    if accept 
-    numberOfCoins++
 }
 
 Behavior:
 calculateSum(){
-//calculate the total sum of accepted coins
-    int sum = 0;
-    for(i = 0; i <= numberOfCoins, i++){
-        sum = sum + 
+//calculate the sum of accepted coins
+//then return the sum
+    int sum;
+    return sum;
+}
+
+
+
+Behavior:
+checkCoins(){
+   int gap = Item item.price - VendingMachine vm.calculateSum;
+   //if gap = 0, return true
+   //if gap > 0, return gap, print out("please insert" + gap + "dollar"), return false 
+   //if gap < 0, execute vm.returnChange, return true
+}
+
+Behavior:
+void returnChange(){
+//return change
+}
+
+Behavior:
+giveOutItem(){
+    if(checkCoins == true) {
+    //vend the item out
     }
-}
-
-Behavior:
-checkCoinMatch(){
-    if User user.inserCoin() == Coin coin.
-}
-
-
-Behavior:
-returnCoin(){
-}
-
-Behavior:
-vendOutItem(){
 }
 ---------------------------------------------
