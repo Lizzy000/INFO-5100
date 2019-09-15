@@ -1,0 +1,58 @@
+Class Course
+State: courseID, courseName, status, professor, dateRange, courseTime, days, classLocation, credits
+Behavior:
+
+-------------------------------------
+Class Student
+State: sutdentID, creditHours
+Behavior:
+login(studentID){
+   RegistrationPlatform.login(studentID)
+}
+
+Behavior:
+searchCourse(courseID){
+    String courseInfo = RegistrationPlatform.searchCourse(courseID);
+}
+
+Behavior:
+registerClass(courseID){
+    RegistrationPlatform.registerClass(courseID);
+}
+
+Behavior:
+dropCourse(courseID){
+    RegistrationPlatform.dropClass(courseID);
+}
+
+--------------------------------------
+Class RegistrationPlatform
+State:
+Behavior:
+Login(studentID){
+}
+
+Behavior:
+selectTerm(){
+}
+
+Behavior:
+searchClass(courseID){
+//list the course info
+}
+
+Behavior:
+registerClass(courseID){
+}
+
+Behavior:
+checkCreditHours(studentID){
+//if credit hours is lower than the required, return false
+//else, return true
+}
+
+Behavior:
+dropClass(courseID){
+//if checkCreditHours is false, warning
+//if checkCreditHours is true, drop the class
+}
