@@ -1,4 +1,11 @@
 Class Driver
 Class ParkingLot
 Class car
+------------------------------------
 Class ParkingCard
+State: cardID, balance, 
+------------------------------------
+Class ParkingTime
+
+------------------------------------
+Class 
