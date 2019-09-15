@@ -1,11 +1,27 @@
 Class Driver
+----------------------------------
 Class ParkingLot
+State: maxCapacity
+Behavior:
+checkCapacity(){
+//check parking lot capacity, if full, return true
+}
+-----------------------------------
 Class car
+State:carID
+Behavior:
+carIn(){
+   if(check.capacity)
+   carNumber++
+}
+
+
+Behavior:
+carOut(){
+carNumber--
+}
+
+
 ------------------------------------
 Class ParkingCard
 State: cardID, balance, 
-------------------------------------
-Class ParkingTime
-
-------------------------------------
-Class 
