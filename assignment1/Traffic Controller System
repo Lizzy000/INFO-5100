@@ -1,1 +1,51 @@
+Class Driver
+---------------------------------------
+Class Passenger
+Behavior:
+pressButton(){
+//request crossing road
+}
+---------------------------------------
+Class TrafficControllerSysterm
+State: duration, color
+Behavior:
+turnRed(green, red){
+   //change green to red
+   Light light.changeColor(green, red)
+}
 
+Behavior:
+turnYellow(red, yellow){
+   //change red to yellow
+   Light light.changeColor(red, yellow);
+}
+
+Behavior:
+turnGreen(yellow, green){
+   //change yellow to green
+   Light light.changeColor(yellow, green);
+}
+
+Behavior:
+setTime(){
+   //every color lasting time
+}
+
+Behavior:
+takePhoto(){
+//take a shot 
+  camera.takeAshot();
+}
+---------------------------------------
+Class Light
+State: red, yellow, green
+Behavior:
+changeColor(color1, color2){
+//change the traffic light color
+}
+---------------------------------------
+Class Camera
+State: 
+Behavior:
+takeAshot(){
+}
