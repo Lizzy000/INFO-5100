@@ -4,25 +4,25 @@ Behavior:
 
 -------------------------------------
 Class Student
-State: sutdentID, creditHours
+State: sutdentID, creditHours, term
 Behavior:
 login(studentID){
    RegistrationPlatform.login(studentID)
 }
 
 Behavior:
-searchCourse(courseID){
-    String courseInfo = RegistrationPlatform.searchCourse(courseID);
+searchCourse(courseID, term){
+    String courseInfo = RegistrationPlatform.searchCourse(courseID, term);
 }
 
 Behavior:
-registerClass(courseID){
-    RegistrationPlatform.registerClass(courseID);
+registerClass(courseID, studentID){
+    RegistrationPlatform.registerClass(courseID, studentID);
 }
 
 Behavior:
-dropCourse(courseID){
-    RegistrationPlatform.dropClass(courseID);
+dropCourse(courseID, studentID){
+    RegistrationPlatform.dropClass(courseID, studentID);
 }
 
 --------------------------------------
@@ -52,7 +52,9 @@ checkCreditHours(studentID){
 }
 
 Behavior:
-dropClass(courseID, term){
+dropClass(courseID, studentID){
+//List<int> registerdClassID
 //if checkCreditHours is false, warning
 //if checkCreditHours is true, drop the class
+   registeredClassID.remove(courseID);
 }
