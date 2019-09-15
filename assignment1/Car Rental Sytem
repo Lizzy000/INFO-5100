@@ -78,7 +78,7 @@ checkCreditCardAvailability(creditCardParamts){
 }
 
 Behavior:
-earch(carParamts) {
+search(carParamts) {
 //list and print all matched car records
 }
 
