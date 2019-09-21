@@ -9,8 +9,14 @@ public class Assignment2 {
         Note: Employee array is passed, not employee
      */
     public double salaryGreaterThanFiveThousand(Employee[] employees) {
-        // @TODO
-        return 0.0;
+        //@todo 
+        doubel sum = 0;
+        for(int i = 0, i < employees.Length, i++) {
+            if(employees[i].getSalary > 5000)
+                sum = sum + employees[i].salary;                           
+            }
+        }
+        return sum;
     }
 
     
@@ -22,6 +28,12 @@ public class Assignment2 {
      */
     public void fizzBuzz(Employee employee) {
         // @TODO
+        if(employee.getSalary % 3 == 0)
+            system.out.printIn("Fizz");
+        if(employees.getSalary % 5 == 0)
+            system.out.printIn("Buzz");
+        if(employee.getSalary % 15 == 0)
+            system.out.printIn("FizzBuzz");
     }
 
     
@@ -33,7 +45,14 @@ public class Assignment2 {
     */
     public double calculateTax(Employee employee) {
         // @TODO
-        return 0.0;
+        doubel tax;
+        if(employee.getSalary <= 2500)
+            tax = 0.1;
+        if(employee.getSalary > 2500 && employee.getSalary <= 5000)
+            tax = 0.25;
+        if(employee.getSalary >5000)
+            tax = 0.35;
+        return tax;
     }
     
     
@@ -43,6 +62,10 @@ public class Assignment2 {
     */
     public void swap(Employee firstEmployee, Employee secondEmployee) {
         // @TODO
+        doubel temp;
+        temp = firstEmployee.getSalary;
+        firstEmployee.setSalary(secondEmployee.getSalary);
+        secondEmployee.setSalary(temp);
     }
 
     
