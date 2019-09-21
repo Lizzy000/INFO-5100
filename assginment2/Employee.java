@@ -44,4 +44,11 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+    
+    //add a new method to Employee class
+    public void raiseSalary(doubel byPercent) {
+        doubel raisedSalary = this.getSalary() * bypercent;
+        this.setSalary(raisedSalary);
+    }
 }
+   
