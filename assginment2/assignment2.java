@@ -149,6 +149,64 @@ public class Assignment2 {
     public Employee[] createEmployees(String[] employeesStr) {
         Employee[] employees = new Employee[employeesStr.length];
         // @TODO
+        for(int i = 0, i < employeeStr.length, i++) {
+            String[] temp = employeesStr[i].split(",");
+            int id = Integer.parseInt(temp[0]);
+            String firstName = temp[1];
+            int age = Integer.parseInt(temp[2]);
+            float salary = Float.parseFloat(temp[3]);
+            employees[i].setId(id);
+            employees[i].setFirstName(firstname);
+            employees[i].setAge(age);
+            employees[i].setSalary(salary);
+        }
         return employees;
+        
+        
+        
+        
+        
+        
+        
+        //below is my original solution, but I found it very complicated and maybe contain bugs, so I comment it.
+       /* 
+        for(int i = 0, i < employeesStr.length, i++) {
+            int j;
+            for(j = 0, j < employeesStr[i].length(), j++) {
+                if(employeesStr[i].charAt(j) == ",") {
+                    int id = Integer.parseInt(employeesStr[i].substring(0,j));
+                    employees[i].setId(id);
+                    break;
+                }
+            }
+            
+            int m;
+            for(m = j+1, m < employeesStr[i].length(), m++) {  
+                if(employeesStr[i].charAt(m) == ",") {
+                    firstName = employeesStr[i].substring(j+1,m);
+                    employees[i].setFirstName(firstName);
+                    break;
+                }
+            }
+            int n;
+            for(n = m+1, n < employeesStr[i].length(), n++) { 
+                if(employeesStr[i].charAt(n) == ",") {
+                    int age = Integer.parseInt(employeesStr[i].substring(m+1,n));
+                    employees[i].setAge(age);
+                    break;
+                }
+            }
+            int o;
+            for(o = n+1, o < employeesStr[i].length(), o++) { 
+                if(employeesStr[i].charAt(o) == ",") {
+                    float salary = Float.parseFloat(employeesStr[i].substring(m+1,n));
+                    employees[i].setSalary(salary);
+                    break;
+                }
+            }
+        }
+                      
+        return employees;
+        */
     }
 }
