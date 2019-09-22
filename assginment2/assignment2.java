@@ -9,11 +9,11 @@ public class Assignment2 {
         Note: Employee array is passed, not employee
      */
     public double salaryGreaterThanFiveThousand(Employee[] employees) {
-        //@todo 
-        doubel sum = 0;
+
+        double sum = 0;
         for(int i = 0, i < employees.Length, i++) {
-            if(employees[i].getSalary > 5000)
-                sum = sum + employees[i].salary;                           
+            if(employees[i].getSalary() > 5000)
+                sum = sum + employees[i].getSalary();                           
             }
         }
         return sum;
@@ -27,13 +27,13 @@ public class Assignment2 {
         "FizzBuzz" - if id of employee is divisible by both 3 and 5
      */
     public void fizzBuzz(Employee employee) {
-        // @TODO
-        if(employee.getSalary % 3 == 0)
-            system.out.printIn("Fizz");
-        if(employees.getSalary % 5 == 0)
-            system.out.printIn("Buzz");
-        if(employee.getSalary % 15 == 0)
-            system.out.printIn("FizzBuzz");
+      
+        if(employee.getSalary() % 3 == 0)
+            System.out.printIn("Fizz");
+        if(employees.getSalary() % 5 == 0)
+            System.out.printIn("Buzz");
+        if(employee.getSalary() % 15 == 0)
+            System.out.printIn("FizzBuzz");
     }
 
     
@@ -43,15 +43,17 @@ public class Assignment2 {
         If salary of employee is greater than 2500 but less than or equal to 5000, tax should be 25%
         If salary of employee is greater than 5000, tax should be 35%
     */
+
     public double calculateTax(Employee employee) {
-        // @TODO
-        doubel tax;
-        if(employee.getSalary <= 2500)
-            tax = 0.1;
-        if(employee.getSalary > 2500 && employee.getSalary <= 5000)
-            tax = 0.25;
-        if(employee.getSalary >5000)
-            tax = 0.35;
+       
+        double tax;
+        double i = employee.getSalary();
+        if(i <= 2500)
+            tax = 0.1 * i;
+        if(i > 2500 && i <= 5000)
+            tax = 0.25 * i;
+        if(i > 5000)
+            tax = 0.35 * i;
         return tax;
     }
     
@@ -61,10 +63,9 @@ public class Assignment2 {
         Implement this method to swap salaries of employees
     */
     public void swap(Employee firstEmployee, Employee secondEmployee) {
-        // @TODO
-        doubel temp;
-        temp = firstEmployee.getSalary;
-        firstEmployee.setSalary(secondEmployee.getSalary);
+        double temp;
+        temp = firstEmployee.getSalary();
+        firstEmployee.setSalary(secondEmployee.getSalary());
         secondEmployee.setSalary(temp);
     }
 
@@ -74,8 +75,12 @@ public class Assignment2 {
         Note: Employee array is passed, not employee
      */
     public int employeesAgeGreaterThan50(Employee[] employees) {
-        // @TODO
-        return 0;
+        int count = 0;
+        for(int i = 0, i <employees.Length, i++) {
+            if(employees[i].getAge() > 50)
+                count++;
+        }
+        return count;
     }
 
     
@@ -86,6 +91,13 @@ public class Assignment2 {
      */
     public void reverseFirstName(Employee employee) {
         // @TODO
+        String reverse = "";
+        String firstName = employee.getFirstName();
+        for(int i = 0, i < employee.getFirstName().length, i++) {
+            reverse = firstName.charAt(i) + reverse;
+        }
+        employee.setFirstName(reverse);
+        
     }
 
     
@@ -96,7 +108,15 @@ public class Assignment2 {
         employee.getFirstName() -> "hail" == false
      */
     public void isContainDigit(Employee employee) {
-        // @TODO
+        
+        String firstName = employee.getFirstName();
+        for(int i = 0, i <10, i++) {
+            if(firstName.contains("i"))
+                returen true;
+        return false;
+         
+                
+        }
     }
 
     
@@ -108,7 +128,9 @@ public class Assignment2 {
         Call this new method.
      */
     public void tripleSalary(Employee employee) {
-        // @TODO
+        double rate = 3.00;
+        employee.raiseSalary(rate);
+        //raiseSalary method has been added into Employee class.
     }
     
     
