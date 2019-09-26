@@ -118,6 +118,23 @@ Input:
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 public int[] spiralOrder(int[][] matrix) {
+
+int[] temp;
+int x = i = j = 0;
+int row = matrix[0].length, column = matrix.length;
+
+for(i = 0, i < row/2, i++){
+ for(j= 0, j < column, j++ ) {
+  temp[x] = matrix[i][j]
+  x++;}
+ for(int a = i, a < row -i -1, a++) {
+  temp[x] = matrix[a][j];
+  x++;}
+ for(int b=
+
+
+}
+}
 }
 
 -----------------------------------------------------------------------------------------------------------------------
