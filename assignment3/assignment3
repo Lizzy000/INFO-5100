@@ -169,5 +169,9 @@ Q9. Explain Encapsulation with an example. (Write at least 30-40 words).
 
 Q10. What is the difference between Encapsulation and Abstraction
 
-Abstraction is to create data and methods without specific solutions or codes. Then an abstraction class designates specific
-solution to son class, which will achieve specific solution. In this case, "son class" is a encapsulation class. 
+Abstraction is to create content without specific solutions or codes. An abstraction class can designates specific
+solution to son class, which will achieve specific solution in an encapsulated way. Abstraction is a blueprint. 
+Abstraction does not care about details.
+
+But encapsulation achieves details, and only get visited by indirect ways. 
+Encapsulation Gets and changes data by specific methods called "getter" and "setter" .
