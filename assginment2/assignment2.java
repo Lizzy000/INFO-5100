@@ -29,11 +29,10 @@ public class Assignment2 {
     public void fizzBuzz(Employee employee) {
       
         if(employee.getSalary() % 3 == 0)
-            System.out.printIn("Fizz");
+            System.out.print("Fizz");
         if(employees.getSalary() % 5 == 0)
-            System.out.printIn("Buzz");
-        if(employee.getSalary() % 15 == 0)
-            System.out.printIn("FizzBuzz");
+            System.out.print("Buzz");
+ 
     }
 
     
