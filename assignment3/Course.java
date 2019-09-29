@@ -22,59 +22,93 @@ public class Course {
   private int courseId, professorId;
   private String courseName;
   private int maxCapcity;
-  private float credits;
-  private ArrayList<Integer> studentIds = new ArrayList<Integer>();
+  private int credits;
+//   private ArrayList<Integer> studentIds = new ArrayList<Integer>();
+  private int[] studentIds = new int[maxCapacity];
   
   
   Course(int courseId) {
-    this.courseId = courseId;
+    if(courseId > 0) {
+      this.courseId = courseId;
+    }
+    else System.out.printIn("please enter a valid Course ID.");
   }
   
   Course(int courseId, int professorId) {
-    this.courseId = courseId;
-    this.professorId = prodessorId;
+    Course(courseId);
+    String id = String.valueOf(professorId);
+    
+    if(id.length == 6){
+      this.professorId = prodessorId;
+    }else System.out.printIn("please enter a six digit number.")
   }
   
   Course(int courseId, int professorId, float credits) {
-    this.courseId = courseId;
-    this.professorId = prodessorId;
+    Course(courseId, professorId);
     this.credits = credits;
   }
   
+  
+  
   public void setCourseId(int courseId) {
-    this.courseId = courseId;
+    Course(courseId);
   }
   public int getCourseId() {
     return courseId;
   }
+  
+  
   public void setProfessorId(int professorId) {
-    this.professorId = professorId;
+    if(id.length == 6){
+      this.professorId = prodessorId;
+    }
+    else System.out.printIn("please enter a six digit number.")
   }
   public int getProffesorId() {
     return professorId;
   }
+  
+  
   public void setCourseName(String courseName) {
-    this.courseName = courseName;
+    if(courseName.length <= 60 && courseName.length >= 10) {
+      this.courseName = courseName;
+    }
+    else System.out.printIn("please enter a valid name.");
+    
   }
   public String getCourseName() {
     return courseName;
   }
+  
+  
   public void setMaxCapacity(int maxCapacity) {
-    this.maxCapacity = maxCapacity;
+    String max = String.valueOf(maxCapacity);
+    if(max.length >= 10 && max.length <=100) {
+      this.maxCapacity = maxCapacity;
+    }
+    else System.out.printIn("please enter a valid value.");
   }
   public int getMaxCapacity() {
     return maxCapacity;
   }
-  public void setCredits(float credits) {
-    this.credits = credits;
+  
+  
+  public void setCredits(int credits) {
+    String crdt = String.valueOf(credits);
+    if(crdt.length == 1 && credits > 0) {
+      this.credits = credits;
+    }    
+    else System.out.printIn("please enter a valid value.");
   }
-  public float getCredits() {
+  public int getCredits() {
     return credits;
   }
 
   
-  public void registerStudent(int studentId) {
-    this.studentIds.add(studentId);
+  public void registerStudent(int[] studentIds) {
+    for(int i = 0; i < studentIds.lenght; i++) {
+      this.studentIds[i] = studentId[i];
+    }
   }
  
   
