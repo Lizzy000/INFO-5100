@@ -111,8 +111,8 @@ public class Assignment2 {
         String firstName = employee.getFirstName();
         for(int i = 0, i <10, i++) {
             if(firstName.contains("i"))
-                returen true;
-        return false;
+                returen false;
+        return true;
          
                 
         }
