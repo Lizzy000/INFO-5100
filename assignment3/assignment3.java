@@ -80,7 +80,24 @@ Example 2:
 Input: 4
 Output: "1211"
 public String countAndSay(int n) {
+  String preString = "1";
+        while (--n > 0) {
+            StringBuilder sb = new StringBuilder();
+            char[] preChars = preString.toCharArray();
 
+            for (int i = 0; i < preChars.length; i++) {
+                int count = 1;
+                while ((i+1) < preChars.length && preChars[i] == preChars[i+1]) {
+                    count++;
+                    i++;
+                }
+                sb.append(String.valueOf(count) + String.valueOf(oldChars[i]));
+            }
+            preString = sb.toString();
+        }
+
+        return preString;
+        }
 }
 
 -----------------------------------------------------------------------------------------------------------------------
@@ -160,7 +177,15 @@ P     I    N
 A   L S  I G
 Y A   H R
 P     I
-
+public String convert(String s, int numRows) {
+   StringBuilder temp = new StringBuilder();
+   
+   Char[][] matrix = new Char[nemRows][];
+   for(int i = 0; i < matrix.length; i++) {
+     
+   }
+   
+}
 -----------------------------------------------------------------------------------------------------------------------
 
 Q9. Explain Encapsulation with an example. (Write at least 30-40 words).
