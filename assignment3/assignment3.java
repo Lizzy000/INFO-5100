@@ -156,34 +156,48 @@ for(i = 0, i < row/2, i++){
 
 -----------------------------------------------------------------------------------------------------------------------
 
-Q8.
-The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this
-P   A   H   N
-A P L S I I G
-Y   I   R
-And then read line by line: "PAHNAPLSIIGYIR"
-Write the code that will take a string and make this conversion given a number of rows:
-String convert(string s, int numRows);
-Example 1:
-Input: s = "PAYPALISHIRING", numRows = 3
-Output: "PAHNAPLSIIGYIR"
+// Q8.
+// The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this
+// P   A   H   N
+// A P L S I I G
+// Y   I   R
+// And then read line by line: "PAHNAPLSIIGYIR"
+// Write the code that will take a string and make this conversion given a number of rows:
+// String convert(string s, int numRows);
+// Example 1:
+// Input: s = "PAYPALISHIRING", numRows = 3
+// Output: "PAHNAPLSIIGYIR"
 
-Example 2:
-Input: s = "PAYPALISHIRING", numRows = 4
-Output: "PINALSIGYAHRPI"
-Explanation:
+// Example 2:
+// Input: s = "PAYPALISHIRING", numRows = 4
+// Output: "PINALSIGYAHRPI"
+// Explanation:
 
-P     I    N
-A   L S  I G
-Y A   H R
-P     I
+// P     I    N
+// A   L S  I G
+// Y A   H R
+// P     I
 public String convert(String s, int numRows) {
-   StringBuilder temp = new StringBuilder();
+   StringBuilder temp = new StringBuilder(); 
+   Char[] arr = s.toCharArray();
    
-   Char[][] matrix = new Char[nemRows][];
-   for(int i = 0; i < matrix.length; i++) {
-     
+   int gap1 = (numRows - 1) * 2;
+   int gap2 = (numRows - i -1) * 2;
+   
+   for(int i = 0; i < numRows; i++) {      
+      for(j = i; j < arr.length; j= j + gap1) {
+          if(i = 0 || i == numRows - 1) {
+              temp.append(arr[j]);
+             
+          }
+          if(i > 0 && i < numRows -1 && (j + gap2) < arr.length) {
+              temp.append(arr[j] + arr[j + gap2]);
+          }
+          
+      }
+      
    }
+   return temp.toString();
    
 }
 -----------------------------------------------------------------------------------------------------------------------
@@ -192,7 +206,7 @@ Q9. Explain Encapsulation with an example. (Write at least 30-40 words).
 
 -----------------------------------------------------------------------------------------------------------------------
 
-Q10. What is the difference between Encapsulation and Abstraction
+// Q10. What is the difference between Encapsulation and Abstraction
 
 Abstraction is to create content without specific solutions or codes. An abstraction class can designates specific
 solution to son class, which will achieve specific solution in an encapsulated way. Abstraction is a blueprint. 
