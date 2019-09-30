@@ -39,7 +39,7 @@
 // Ex: Input :[1,6,2,3,2,4,5,6]
 // Output: [1,6,2,3,4,5]
 
-public int[] removeDuplicates(int[] studentIds) {
+public Integer[] removeDuplicates(int[] studentIds) {
 
   
   ArrayList<Integer> list = new ArrayList<Integer>();
@@ -47,7 +47,7 @@ public int[] removeDuplicates(int[] studentIds) {
   for(int i = 0; i < studentIds.length; i++) {
     for(int j = i+1; j <studentIds.length; j++) {
       if(studentIds[i] == studentIds[j]) {
-        if(!list.contain(studentIds[i])) {
+        if(!list.contains(studentIds[i])) {
           list.add(studentIds[i]);
         }       
       }
@@ -160,44 +160,79 @@ public String reverse(String input) {
 -----------------------------------------------------------------------------------------------------------------------
 
 
-Q7.
-Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
-Example 1:
-Input:
-[
- [ 1, 2, 3 ],
- [ 4, 5, 6 ],
- [ 7, 8, 9 ]
-]
-Output: [1,2,3,6,9,8,7,4,5]
+// Q7.
+// Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+// Example 1:
+// Input:
+// [
+//  [ 1, 2, 3 ],
+//  [ 4, 5, 6 ],
+//  [ 7, 8, 9 ]
+// ]
+// Output: [1,2,3,6,9,8,7,4,5]
 
-Example 2:
-Input:
-[
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9,10,11,12]
-]
-Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+// Example 2:
+// Input:
+// [
+//   [1, 2, 3, 4],
+//   [5, 6, 7, 8],
+//   [9,10,11,12]
+// ]
+// Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 public int[] spiralOrder(int[][] matrix) {
 
-int[] temp;
-int x = i = j = 0;
-int row = matrix[0].length, column = matrix.length;
+  ArrayList<Integer> list = new ArrayList<Integer>();
+  
+  int row = matrix.length;
+  int column = matrix[0].length;
+ 
+  int x=0; 
+  int y=0;
+ 
+  while(row > 0 && column > 0){
+    
+      if(row == 1){
+         for(int i = 0; i < column; i++){
+             list.add(matrix[x][y++]);
+         }
+             break;
+      }else if(n == 1){
+          for(int i = 0; i < m; i++){
+             list.add(matrix[x++][y]);
+          }
+          break;
+   }
+ 
+         
+        for(int i = 0 ;i < column-1; i++){
+            list.add(matrix[x][y++]);
+        }
+         
+        for(int i = 0; i < row - 1; i++){
+            list.add(matrix[x++][y]);
+        }
+        
+        for(int i = 0; i < column - 1; i++){
+            list.add(matrix[x][y--]);
+        }
+ 
+        for(int i = 0;i<row - 1; i++){
+            list.add(matrix[x--][y]);
+        }
+            
+            row = row - 2;
+            column = column - 2;
+            x++;
+            y++;
+            
+        }
+        Integer[] result = new Integer[list.size()];
+        return list.toArray(result);
+    }
 
-for(i = 0, i < row/2, i++){
- for(j= 0, j < column, j++ ) {
-  temp[x] = matrix[i][j]
-  x++;}
- for(int a = i, a < row -i -1, a++) {
-  temp[x] = matrix[a][j];
-  x++;}
- for(int b=
 
 
-}
-}
 }
 
 -----------------------------------------------------------------------------------------------------------------------
@@ -249,14 +284,19 @@ public String convert(String s, int numRows) {
 -----------------------------------------------------------------------------------------------------------------------
 
 Q9. Explain Encapsulation with an example. (Write at least 30-40 words).
+     
+     Encapsulation is like a black box, you can use it without caring about what's inside.
+     You can use a getter to get inner data of an encapsulated object, either change inner data with a setter.
+     By this way, inner data can be protected.
+     In assignment 3, the Course class is an encapsulated class.
 
 -----------------------------------------------------------------------------------------------------------------------
 
 // Q10. What is the difference between Encapsulation and Abstraction
 
-Abstraction is to create content without specific solutions or codes. An abstraction class can designates specific
-solution to son class, which will achieve specific solution in an encapsulated way. Abstraction is a blueprint. 
+Abstraction is to create content without specific solutions or codes. An abstraction class can designate specific
+solution to son class, which will achieve specific function in an encapsulated way. Abstraction is a blueprint. 
 Abstraction does not care about details.
 
 But encapsulation achieves details, and only get visited by indirect ways. 
-Encapsulation Gets and changes data by specific methods called "getter" and "setter" .
+Encapsulation gets and changes data by specific methods called "getter" and "setter" .
