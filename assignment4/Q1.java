@@ -1,5 +1,5 @@
 
-public abstract class Shape {
+public class Shape {
   String name;
   double perimeter;
   double area;
@@ -7,8 +7,12 @@ public abstract class Shape {
   void draw() {
     System.out.pirntIn("Drawing shape");
   };
-  abstract double getArea();
-  abstract double getPerimeter();
+  double getArea() {
+    area = 0;
+  };
+  double getPerimeter() {
+    perimeter = 0;
+  };
   
 }
   
