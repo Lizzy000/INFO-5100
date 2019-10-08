@@ -12,5 +12,5 @@ abstract public class DessertItem {
     return this.name;
   }
   
-  abstract double getCost();
+  abstract int getCost();
 }
