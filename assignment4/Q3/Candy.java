@@ -7,6 +7,6 @@ public class Candy extends DessertItem{
   Candy(String name, double weight, double price) {
     super.name = name;
     this.weight = weight;
-    this.price = price/100;
+    this.price = Math.round(price/100);
   }
 }
