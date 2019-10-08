@@ -1,12 +1,16 @@
 public class Candy extends DessertItem{
   
   private double weight;
-  private double price;
-  private double cost = Math.round(weight * price);
+  private int priceCent;
+  private int cost = Math.round(weight * priceCent);
   
-  Candy(String name, double weight, double price) {
+  Candy(String name, double weight, int priceCent) {
     super.name = name;
     this.weight = weight;
-    this.price = Math.round(price/100);
+    this.price = priceCent;
+  }
+  
+  public int getCost() {
+    return this.cost;
   }
 }
