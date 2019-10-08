@@ -8,4 +8,8 @@ public class Sundae extends IceCream {
     this.toppingName = toppingName;
     this.toppingPriceCent = toppingPriceCent;
   }
+  
+  public int getCost() {
+    return this.cost;
+  }
 }
