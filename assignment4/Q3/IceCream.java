@@ -3,6 +3,6 @@ public class IceCream extends DessertItem {
   
   IceCream(String name, double price) {
     super.name = name;
-    this.cost = price/100;
+    this.cost = Math.round(price/100);
   }
 }
