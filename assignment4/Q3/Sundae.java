@@ -1,11 +1,11 @@
 public class Sundae extends IceCream {
   private String toppingName;
-  private double toppingPrice;
-  private double cost = Math.round(super.cost + toppingPrice);
+  private int toppingPriceCent;
+  private int cost = super.cost + toppingPriceCent;
   
-  Sundae(String name, double cost, String toppingName, double toppingPirce) {
+  Sundae(String name, int cost, String toppingName, int toppingPirceCent) {
     super(name, cost);
     this.toppingName = toppingName;
-    this.toppingPrice = Math.round(topingPrice/100);
+    this.toppingPriceCent = toppingPriceCent;
   }
 }
