@@ -1,12 +1,17 @@
 public class Cookies extends DessertItem {
   private int number;
-  private double price;
-  private double cost = Math.round((number/12) * price);
+  private int priceCent;
+  private int cost = Math.round((number/12) * priceCent);
   
-  Cookies(String name, int number, double price) {
+  Cookies(String name, int number, int priceCent) {
     super(name);
     this.number = number;
-    this.price = Math.round(price/100);
+    this.priceCent = priceCent;
   }
+  
+  public int getCost() {
+    return this.cost;
+  }
+  
   
 }
