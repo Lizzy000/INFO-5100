@@ -1,8 +1,12 @@
 public class IceCream extends DessertItem {
-  private double cost;
+  private int cost;
   
-  IceCream(String name, double price) {
+  IceCream(String name, int priceCent) {
     super.name = name;
-    this.cost = Math.round(price/100);
+    this.cost = priceCent;
+  }
+  
+  public int getCost() {
+     return this.cost;
   }
 }
