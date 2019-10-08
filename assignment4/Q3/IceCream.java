@@ -1,8 +1,8 @@
 public class IceCream extends DessertItem {
-  private double price;
+  private double cost;
   
   IceCream(String name, double price) {
     super.name = name;
-    this.price = price/100;
+    this.cost = price/100;
   }
 }
