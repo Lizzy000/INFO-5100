@@ -1,6 +1,6 @@
 class Solution {
   
-    public Integer multiply(Integer[][] A,Integer[][] B){
+    public void multiply(Integer[][] A,Integer[][] B){
  
 		Integer AB[][] = new Integer[A.length][B[0].length];
 		
@@ -24,7 +24,7 @@ class Solution {
 		{
 			for(int n = 0;n<B[0].length;n++)
 			{
-				System.out.print(c[m][n]+"\t");
+				System.out.print(AB[m][n]+"\t");
 			}
 			System.out.println();
 		}
