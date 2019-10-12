@@ -3,4 +3,4 @@ it means the variable/method cannot be changed/overrided by subclasses.
 
 but "finally"  appears in an exception. When use "try" and "catch" to catch possible exception, 
 no matter the "catch" words being executed or not,
-the "finally" words will be executed whatever.
+the "finally" words will be executed anyhow.
