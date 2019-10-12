@@ -1,1 +1,4 @@
+if use "final" to define a class,the class cannot be extended. Or a variable or method defined by"final",
+it means the variable/method cannot be changed/overrided by subclasses.
 
+but "finally" always appears in exception. When use "try" and "catch" to catch possible exception, 
