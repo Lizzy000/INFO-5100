@@ -1,6 +1,6 @@
-if use "final" to define a class,the class cannot be extended. Or a variable or method defined by"final",
-it means the variable/method cannot be changed/overrided by subclasses.
+if use "final" to define a class,the class cannot be extended/inherited. Or a variable or method defined by"final",
+it means the variable/method cannot be changed/overridden by subclasses.
 
 but "finally"  appears in an exception. When use "try" and "catch" to catch possible exception, 
 no matter the "catch" words being executed or not,
-the "finally" words will be executed anyhow.
+the "finally" words will always be executed.
