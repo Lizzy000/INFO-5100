@@ -3,7 +3,7 @@ class FullTime extends Employee {
     super(name, paymentPerHour);
   }
   public int calculateSalary() {
-    int salary = 8 * this.paymentPerHour;
+    int salary = 8 * getPaymentPerHour();
     return salary;
   }
 }
