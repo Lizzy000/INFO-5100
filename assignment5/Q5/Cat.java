@@ -14,6 +14,6 @@ class Cat extends Pet implements Boardable {
   }
   
   public String toString() {
-  
+    return super.toString + "Hair:" + hairLength;
   }
 }
