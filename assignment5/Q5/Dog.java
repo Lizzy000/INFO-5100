@@ -1,8 +1,8 @@
 import pet;
 import boardable;
 
-class Cat extends Pet implements Boardable {
-  private String hairLength;
+class Dog extends Pet implements Boardable {
+  private String size;
   private int boardStartMonth;
   private int boardStartDay;
   private int boardStartYear;
@@ -11,17 +11,17 @@ class Cat extends Pet implements Boardable {
   private int boardEndYear;
 
   
-  Cat (String name, String ownerName, String color, String hairLength) {
+  Dog (String name, String ownerName, String color, String size) {
     super(name, ownerName, color);
-    this.hairLength = hairLength;
+    this.size = size;
   }
   
-  public String getHairLength() {
-    return this.hairLength;
+  public String getSize() {
+    return this.size;
   }
   
   public String toString() {
-    return "CAT:" + "\n" + super.toString + "\n" + "Hair:" + hairLength;
+    return "DOG:" + "\n" + super.toString + "\n" + "Size:" + size;
   }
   public void setBoardStart(int month, int day, int year) {
     if(month > 12 || month < 1 || day >31 || day <1 || year <1000 || year >9999) {
