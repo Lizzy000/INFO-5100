@@ -24,3 +24,9 @@ public class ATM {
     this.transactionFee = transactionFee;
   }
 }
+
+public class testMachine {
+  public static void main(String args[]) {
+    User user = new User();
+  }
+}
