@@ -1,1 +1,6 @@
+ArrayList is based on array, which means after you delete an element, you have to move other elements behinds the deleted element forward.
+LinkedList is based on nodes, so when you delete one element, you just change the next pointer of the node before the deleted node.
 
+
+ArrayList has index, so it's much easier to retrive an element based on an index;
+LinkedList doesn't have index, when you get an element, you have to move pointer.
