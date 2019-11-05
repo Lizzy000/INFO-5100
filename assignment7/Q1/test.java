@@ -8,8 +8,9 @@ public class test {
     StringBuffer sb = new StringBuffer();
     int tempBit;
     while((tempBit = fis.read()) != -1) {
-      sb.append(tempBit);
+      sb.append((char)tempBit);
     }
+    fis.close();
     
   }
 }
