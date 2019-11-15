@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class decodeTest {
+public class DecodeTest {
 
   public static void main(String[] args) throws Exception {
     File file = new File("/INFO-5100/assignment7/Q2/input.txt");
