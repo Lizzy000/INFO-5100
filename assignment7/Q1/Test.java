@@ -1,6 +1,6 @@
 import java.io.*;
 
-  public class test {
+  public class Test {
 	  
 	public static void main(String[] args) throws Exception {
 	    File input = new File("INFO-5100/assignment7/Q1/Input.txt");
