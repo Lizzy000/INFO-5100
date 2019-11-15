@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.io.*;
+
 public class LineCounts {
 
   public static void main(String[] args) throws IOException {
