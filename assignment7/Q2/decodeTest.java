@@ -3,33 +3,32 @@ import java.io.*;
 public class decodeTest {
 
   public static void main(String[] args) throws Exception {
-		File file = new File("/INFO-5100/assignment7/Q2/input.txt");
-		FileInputStream fis = new FileInputStream(file);
-		String s = readFromStream(fis);
+    File file = new File("/INFO-5100/assignment7/Q2/input.txt");
+    FileInputStream fis = new FileInputStream(file);
+    String s = readFromStream(fis);
 		
     String result = decodeString(s);
     writeToFile(result);
 
-	}
+  }
 
   private static String readFromStream(FileInputStream fis) throws IOException {
     String result = "";
-		while (true) {
-			int x = fis.read();
-			if (x == -1)
-				break;
-			char c = (char) x;
-			result += c;
-		}
-		fis.close();
+    while (true) {
+	int x = fis.read();
+	if (x == -1) break;
+	char c = (char) x;
+	result += c;
+    }
+    fis.close();
     return result;
-	}
+  }
   
   private static void writeToFile(String s) {
     File file = new File("/INFO-5100/assignment7/Q2/output.txt");
-		FileOutputStream fos = new FileOutputStream(file);
-		fos.write(s.getBytes());
-		fos.close();
+    FileOutputStream fos = new FileOutputStream(file);
+    fos.write(s.getBytes());
+    fos.close();
   }
    
   
