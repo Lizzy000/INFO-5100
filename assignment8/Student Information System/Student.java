@@ -106,7 +106,7 @@ public class Student extends javax.swing.JFrame {
             }
         });
 
-        btnQuit.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnQuit.setFont(new java.awt.Font("Tahoma", 1, 11)); 
         btnQuit.setText("Quit ");
         btnQuit.setToolTipText("Click here to quit the program");
         btnQuit.addActionListener(new java.awt.event.ActionListener() {
